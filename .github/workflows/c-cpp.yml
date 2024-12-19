@@ -35,6 +35,15 @@ jobs:
       run: |
         cd build
         ./bin/calculator_tests
+
+    - name: Run Coverage
+      run: |
+        cd build
+        cd CMakeFiles/calculator_tests.dir/
+        ls -l
+        lcov -d . -c -o coverage.info
+        lcov -r coverage.info */build/* */tests/* */c++/* -o coverageFiltered.info
+        lcov --list coverageFiltered.info
       
         
 
