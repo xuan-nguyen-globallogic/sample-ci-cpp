@@ -30,5 +30,10 @@ jobs:
         cd build
         cmake ..
         make -j8
+
+    - name: Run tests
+      run: |
+        ./bin/calculator_tests
+      
         
 
