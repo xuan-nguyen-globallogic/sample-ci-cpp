@@ -33,6 +33,7 @@ jobs:
 
     - name: Run tests
       run: |
+        cd build
         ./bin/calculator_tests
       
         
