@@ -41,7 +41,7 @@ jobs:
         cd build
         cd CMakeFiles/calculator_tests.dir/
         ls -l
-        lcov -d . -c -o coverage.info
+        lcov --ignore-errors unused -d . -c -o coverage.info
         lcov -r coverage.info */build/* */tests/* */c++/* -o coverageFiltered.info
         lcov --list coverageFiltered.info
       
