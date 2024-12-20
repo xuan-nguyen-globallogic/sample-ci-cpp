@@ -1,0 +1,12 @@
+BasedOnStyle: google
+ColumnLimit: 80
+IndentWidth: 4
+AlignAfterOpenBracket: true
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+PenaltyBreakAssignment: 100
+PenaltyBreakFirstLessLess: 100
+PenaltyBreakString: 400
+PenaltyExcessCharacter: 5
+PenaltyReturnTypeOnItsOwnLine: 200
