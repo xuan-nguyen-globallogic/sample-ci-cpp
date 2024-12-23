@@ -1,0 +1,27 @@
+name: Clang-Format Check
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      # Step 2: Install Clang-Format
+    - name: Install Clang-Format
+      run: sudo apt-get install -y clang-format
+      # Step 3: Run Clang-Format Check
+    - name: Check Formatting
+      run: |
+        # Find all .cpp, .h, .c, .hpp files
+        files=$(find . -name "*.cpp" -o -name "*.h" -o -name "*.c" -o -name "*.hpp")
+        for file in $files; do
+          clang-format --dry-run --Werror "$file"
+        done
