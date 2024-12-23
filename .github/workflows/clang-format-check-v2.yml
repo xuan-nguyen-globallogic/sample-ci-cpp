@@ -3,8 +3,18 @@ name: Clang-Format Simple Check
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - '**/*.cpp'
+      - '**/*.h'
+      - '**/*.c'
+      - '**/*.hpp'
   pull_request:
     branches: [ "master" ]
+    paths:
+      - '**/*.cpp'
+      - '**/*.h'
+      - '**/*.c'
+      - '**/*.hpp'
 
 jobs:
   build:
