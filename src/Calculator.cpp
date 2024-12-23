@@ -5,7 +5,7 @@ Calculator::Calculator() { m_lastResult = 0; }
 Calculator::~Calculator() {}
 
 bool Calculator::add(int addend1, int addend2) {
-        m_lastResult = addend1 + addend2;
+    m_lastResult = addend1 + addend2;
     return true;
 }
 
