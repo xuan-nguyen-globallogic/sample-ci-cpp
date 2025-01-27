@@ -4,8 +4,8 @@ Calculator::Calculator() { m_lastResult = 0; }
 
 Calculator::~Calculator() {}
 
-bool Calculator::add(int addend1, int addend2) {
-    m_lastResult = addend1 + addend2;
+bool Calculator::add(int addend_1, int addend_2) {
+    m_lastResult = addend_1 + addend_2;
     return true;
 }
 
